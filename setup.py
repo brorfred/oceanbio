@@ -15,23 +15,12 @@ here = path.abspath(path.dirname(__file__))
 
 setup(
     name='oceanbio',
-
-    # Versions should comply with PEP440.  For a discussion on single-sourcing
-    # the version across setup.py and the project code, see
-    # https://packaging.python.org/en/latest/single_source_version.html
     version='0.9.0',
-
     description='Methods for biological oceanography and remote sensing',
     #long_description=long_description,
-
-    # The project's main homepage.
     url='https://github.com/brorfred/oceanbio',
-
-    # Author details
     author='Bror Jonsson',
     author_email='oceanbio@bror.us',
-
-    # Choose your license
     license='MIT',
 
     # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
@@ -71,7 +60,8 @@ setup(
     # your project is installed. For an analysis of "install_requires" vs pip's
     # requirements files see:
     # https://packaging.python.org/en/latest/requirements.html
-    install_requires=['numpy'],
+    install_requires=['numpy>=1.7',"njord"],
+    dependency_links=['git+https://github.com/brorfred/njord.git#egg=njord',],
 
     # List additional groups of dependencies here (e.g. development
     # dependencies). You can install these using the following syntax,
